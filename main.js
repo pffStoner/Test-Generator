@@ -21,13 +21,23 @@ let Questions = function (question, answers, correct) {
 }
 
 Questions.prototype.displayQuestion = function(){
-    let qStr = "<div class='question'>"+this.question;
+    let qStr = "<div class='question row'>"+this.question;
+    let correctId = "";
     //let answers = getFormInfo.slice(1,4);
    // $('.col-md-10').append("<div class='question'>"+this.question);
     for (let i = 0; i < this.answers.length; i++) {
+        if (i === parseInt(this.correct)) {
+            correctId = "correct";
+            console.log(i +" and "+ this.correct );
+
+        }else{
+            console.log(i +" fand "+ this.correct );
+            correctId = "false";
+            
+        }
         qStr+= "<div class='form-check'>"+
-        "<input class='form-check-input' type='radio' name='exampleRadios' id='exampleRadios1' value='option1' checked>"+
-        "<label class='form-check-label' for='exampleRadios1'>"+
+        "<input class='form-check-input' type='radio' name='exampleRadios' id="+correctId+" value='option1' checked>"+
+        "<label class='form-check-label "+correctId+"' for='exampleRadios1'>"+
          this.answers[i]+"</label>"+"</div>"    
     }
     qStr += "</div>";
@@ -38,8 +48,14 @@ function createQuestion() {
    let form =  getFormInfo();
     let question = new Questions(form[0], form.slice(1,5), form[5]);
     question.displayQuestion();
+    
+    return question;
 }
 
+$('#checkBtn').click(function(){
+    $('.false').css("color", "red" );
+    $( '.correct' ).css("color","green");
+});
 
 
 
@@ -62,28 +78,29 @@ let d = prompt('Отг Г');
 
 */
 
+
 /*
 $('.col-md-10').append("<div class='question'>"
-                                        +question+
+                                        +"dsds"+
                                         "<div class='form-check'>"+
                                         "<input class='form-check-input' type='radio' name='exampleRadios' id='exampleRadios1' value='option1' checked>"+
                                         "<label class='form-check-label' for='exampleRadios1'>"+
-                                         a+"</label>"+"</div>"+
+                                        "dsds"+"</label>"+"</div>"+
                                          "<div class='form-check'>"+
                                          "<input class='form-check-input' type='radio' name='exampleRadios' id='exampleRadios1' value='option1' checked>"+
                                          "<label class='form-check-label' for='exampleRadios1'>"+
-                                          a+"</label>"+"</div>"+
+                                         "dsds"+"</label>"+"</div>"+
                                           "<div class='form-check'>"+
                                           "<input class='form-check-input' type='radio' name='exampleRadios' id='exampleRadios1' value='option1' checked>"+
                                           "<label class='form-check-label' for='exampleRadios1'>"+
-                                           a+"</label>"+"</div>"+
+                                          "dsds"+"</label>"+"</div>"+
                                         "</div>");
-
+                                        
                                         
 
-                                        */
+                                    
 
-
+*/
 
 
 

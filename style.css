@@ -8,11 +8,15 @@
     text-align: center;
   
 }
-.col-md-10{
+.col-md-10,.ii{
     margin: 0 auto;
     border: 1px solid black;
     height: auto;
 }
 .question{
     margin: 0 auto;
+}
+
+.form-check-input{
+    color:red;
 }
