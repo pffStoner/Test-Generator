@@ -1,7 +1,19 @@
+@import url('https://fonts.googleapis.com/css?family=Indie+Flower');
+@import url('https://fonts.googleapis.com/css?family=Fjalla+One|Indie+Flower');
+
+
 *{
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+}
+.container{
+    background-image: linear-gradient(to bottom, rgba(22, 61, 170, 0.2) 30%, 
+    rgba(94, 117, 179, 0.3) 20%, #5e75b3 80%, #5e75b3 50%);
+    min-height: 100vh;
+    max-height: auto;
+    margin: 14px auto;
+    font-family: 'Indie Flower', cursive;
 }
 .container > h1{
     margin: 0 auto;
@@ -10,13 +22,15 @@
 }
 .col-md-10,.ii{
     margin: 0 auto;
-    border: 1px solid black;
     height: auto;
 }
 .question{
     margin: 0 auto;
 }
+.question > .form-check{
+    margin: 0 auto;
+}
 
-.form-check-input{
-    color:red;
+label{
+  font-family: 'Indie Flower', cursive;
 }

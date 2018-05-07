@@ -35,8 +35,8 @@ Questions.prototype.displayQuestion = function(){
             correctId = "false";
             
         }
-        qStr+= "<div class='form-check'>"+
-        "<input class='form-check-input' type='radio' name='exampleRadios' id="+correctId+" value='option1' checked>"+
+        qStr+= "<div class='form-check col-md-12'>"+
+        "<input class='form-check-input' type='radio' name='"+this.question.slice(1,10)+"' id="+correctId+" value='option1' checked>"+
         "<label class='form-check-label "+correctId+"' for='exampleRadios1'>"+
          this.answers[i]+"</label>"+"</div>"    
     }
